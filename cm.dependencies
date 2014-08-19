@@ -1,11 +1,11 @@
 [
   {
     "repository": "android_device_motorola_tegra3-common",
-    "target_path": "device/motorola/tegra3-common",
+    "target_path": "device/motorola/tegra3-common"
   },
   {
     "repository": "android_kernel_motorola_stingray",
-    "target_path": "kernel/motorola/stingray",
+    "target_path": "kernel/motorola/stingray"
   },
   {
     "repository": "proprietary_vendor_motorola",
