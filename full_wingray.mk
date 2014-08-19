@@ -47,7 +47,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
 # Device specific
-$(call inherit-product, device/moto/wingray/device.mk)
+$(call inherit-product, device/motorola/wingray/device.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_wingray

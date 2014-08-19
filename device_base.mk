@@ -15,7 +15,7 @@
 #
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/moto/wingray/overlay-common
+    device/motorola/wingray/overlay-common
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
@@ -29,10 +29,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 include frameworks/native/build/tablet-dalvik-heap.mk
 
 PRODUCT_COPY_FILES += \
-    device/moto/wingray/init.stingray.rc:root/init.stingray.rc \
-    device/moto/wingray/init.stingray.usb.rc:root/init.stingray.usb.rc \
-    device/moto/wingray/fstab.stingray:root/fstab.stingray \
-    device/moto/wingray/ueventd.stingray.rc:root/ueventd.stingray.rc
+    device/motorola/wingray/init.stingray.rc:root/init.stingray.rc \
+    device/motorola/wingray/init.stingray.usb.rc:root/init.stingray.usb.rc \
+    device/motorola/wingray/fstab.stingray:root/fstab.stingray \
+    device/motorola/wingray/ueventd.stingray.rc:root/ueventd.stingray.rc
 
 ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)
 PRODUCT_COPY_FILES += \
@@ -40,11 +40,11 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    device/moto/wingray/mXT1386_08_AA.bin:system/etc/firmware/mXT1386_08_AA.bin \
-    device/moto/wingray/mXT1386_08_E1.bin:system/etc/firmware/mXT1386_08_E1.bin \
-    device/moto/wingray/mXT1386_09_AA.bin:system/etc/firmware/mXT1386_09_AA.bin \
-    device/moto/wingray/mXT1386_10_AA.bin:system/etc/firmware/mXT1386_10_AA.bin \
-    device/moto/wingray/mXT1386_10_FF.bin:system/etc/firmware/mXT1386_10_FF.bin
+    device/motorola/wingray/mXT1386_08_AA.bin:system/etc/firmware/mXT1386_08_AA.bin \
+    device/motorola/wingray/mXT1386_08_E1.bin:system/etc/firmware/mXT1386_08_E1.bin \
+    device/motorola/wingray/mXT1386_09_AA.bin:system/etc/firmware/mXT1386_09_AA.bin \
+    device/motorola/wingray/mXT1386_10_AA.bin:system/etc/firmware/mXT1386_10_AA.bin \
+    device/motorola/wingray/mXT1386_10_FF.bin:system/etc/firmware/mXT1386_10_FF.bin
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
@@ -62,16 +62,16 @@ PRODUCT_COPY_FILES += \
     $(call add-to-product-copy-files-if-exists,packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml)
 
 PRODUCT_COPY_FILES += \
-        device/moto/wingray/vold.fstab:system/etc/vold.fstab \
-        device/moto/wingray/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
-        device/moto/wingray/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
-        device/moto/wingray/cpcap-key.kcm:system/usr/keychars/cpcap-key.kcm \
-        device/moto/wingray/stingray-keypad.kl:system/usr/keylayout/stingray-keypad.kl \
-        device/moto/wingray/stingray-keypad.kcm:system/usr/keychars/stingray-keypad.kcm
+        device/motorola/wingray/vold.fstab:system/etc/vold.fstab \
+        device/motorola/wingray/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
+        device/motorola/wingray/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
+        device/motorola/wingray/cpcap-key.kcm:system/usr/keychars/cpcap-key.kcm \
+        device/motorola/wingray/stingray-keypad.kl:system/usr/keylayout/stingray-keypad.kl \
+        device/motorola/wingray/stingray-keypad.kcm:system/usr/keychars/stingray-keypad.kcm
 
 PRODUCT_COPY_FILES += \
-        device/moto/wingray/libaudio/audio_policy.conf:system/etc/audio_policy.conf \
-        device/moto/wingray/audio_effects.conf:system/vendor/etc/audio_effects.conf
+        device/motorola/wingray/libaudio/audio_policy.conf:system/etc/audio_policy.conf \
+        device/motorola/wingray/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES := \
     camera.stingray \
@@ -104,11 +104,11 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/moto/wingray/media_profiles.xml:system/etc/media_profiles.xml
+    device/motorola/wingray/media_profiles.xml:system/etc/media_profiles.xml
 
 # media codec config xml file
 PRODUCT_COPY_FILES += \
-    device/moto/wingray/media_codecs.xml:system/etc/media_codecs.xml
+    device/motorola/wingray/media_codecs.xml:system/etc/media_codecs.xml
 
 # Bluetooth config file
 PRODUCT_COPY_FILES += \

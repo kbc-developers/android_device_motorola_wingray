@@ -73,12 +73,12 @@ BOARD_USES_GENERIC_AUDIO := false
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/wingray/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/motorola/wingray/bluetooth
 
 BOARD_HAVE_GPS := true
 
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/moto/wingray/egl.cfg
+BOARD_EGL_CFG := device/motorola/wingray/egl.cfg
 MAX_EGL_CACHE_KEY_SIZE := 4096
 MAX_EGL_CACHE_SIZE := 2146304
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -98,7 +98,7 @@ NEED_WORKAROUND_CORTEX_A9_745320 := true
 
 # Use the open-source board-info file if none was set by the vendor
 # config.
-TARGET_BOARD_INFO_FILE ?= device/moto/wingray/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/motorola/wingray/board-info.txt
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true

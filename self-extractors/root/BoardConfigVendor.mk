@@ -15,5 +15,5 @@
 LOCAL_STEM := wingray/BoardConfigWingray.mk
 
 -include vendor/broadcom/$(LOCAL_STEM)
--include vendor/moto/$(LOCAL_STEM)
+-include vendor/motorola/$(LOCAL_STEM)
 -include vendor/nvidia/$(LOCAL_STEM)

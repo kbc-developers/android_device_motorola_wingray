@@ -5,7 +5,7 @@ PRODUCT_RELEASE_NAME := XOOM
 $(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/moto/wingray/full_wingray.mk)
+$(call inherit-product, device/motorola/wingray/full_wingray.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := wingray

@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/moto/wingray/device_base.mk)
+$(call inherit-product, device/motorola/wingray/device_base.mk)
 
 # Add commands which are wingray specific after here
 DEVICE_PACKAGE_OVERLAYS := \
-    device/moto/wingray/overlay device/moto/wingray/overlay-common
+    device/motorola/wingray/overlay device/motorola/wingray/overlay-common
