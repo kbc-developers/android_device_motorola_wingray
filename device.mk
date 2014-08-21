@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2010 The Android Open Source Project
+# Copyright (C) 2014 AOJP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,8 +14,18 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/motorola/wingray/device_base.mk)
+## (2) Also get non-open-source specific aspects if available
+$(call inherit-product-if-exists, vendor/motorola/wingray/wingray-vendor.mk)
 
-# Add commands which are wingray specific after here
-DEVICE_PACKAGE_OVERLAYS := \
-    device/motorola/wingray/overlay device/motorola/wingray/overlay-common
+# aojp common
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+
+## device overlays
+DEVICE_PACKAGE_OVERLAYS += device/motorola/wingray/overlay
+## common overlays
+DEVICE_PACKAGE_OVERLAYS += device/motorola/tegra3-common/overlay-common
+
+PRODUCT_PROPERTY_OVERRIDES += ro.carrier=wifi-only
+
+# Inherit from tegra3-common
+$(call inherit-product, device/motorola/tegra3-common/tegra3-common.mk)

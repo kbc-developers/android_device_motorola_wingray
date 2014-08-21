@@ -1,4 +1,5 @@
-# Copyright (C) 2010 The Android Open Source Project
+#
+# Copyright 2014 AOJP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,38 +20,14 @@
 # product configuration (apps).
 #
 
-# Set wifi-only before it's set by generic_no_telephony.mk
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.carrier=wifi-only
-
-# Additional settings used in all AOSP builds
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.com.android.dateformat=MM-dd-yyyy
-
-# Put en_US first in the list, so make it default.
-PRODUCT_LOCALES := en_US
-
-PRODUCT_PACKAGES := \
-    libfwdlockengine \
-    WAPPushManager
-
-# Get some sounds
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
-
-# Get the TTS language packs
-$(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
-
-# Get a list of languages.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
-
-# Get everything else from the parent package
-$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
-
-# Device specific
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+# Inherit from wingray device
 $(call inherit-product, device/motorola/wingray/device.mk)
 
-# Discard inherited values and use our own instead.
+# Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_wingray
 PRODUCT_DEVICE := wingray
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on Wingray
+PRODUCT_BRAND := motorola
+PRODUCT_MANUFACTURER := motorola
+PRODUCT_MODEL := Xoom WiFi
