@@ -20,8 +20,8 @@
 # definition file).
 #
 
-# inherit from tegra3-common
--include device/motorola/tegra3-common/BoardConfigCommon.mk
+# inherit from tegra2-common
+-include device/motorola/tegra2-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := wingray,stingray,everest
 BOARD_KERNEL_CMDLINE := androidboot.carrier=wifi-only product_type=w
