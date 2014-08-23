@@ -20,11 +20,6 @@ $(call inherit-product-if-exists, vendor/motorola/wingray/wingray-vendor.mk)
 # aojp common
 $(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
 
-## device overlays
-DEVICE_PACKAGE_OVERLAYS += device/motorola/wingray/overlay
-## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/motorola/tegra2-common/overlay-common
-
 PRODUCT_PROPERTY_OVERRIDES += ro.carrier=wifi-only
 
 # Inherit from tegra2-common
